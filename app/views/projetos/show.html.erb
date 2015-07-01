@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome do Projeto:</strong>
+  <%= @projeto.nomeProjeto %>
+</p>
+
+<p>
+  <strong>Mini Mundo:</strong>
+  <%= @projeto.resumo %>
+</p>
+
+<%= link_to 'Editar', edit_projeto_path(@projeto) %> |
+<%= link_to 'Voltar', projetos_path %>

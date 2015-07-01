@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listagem de Projetos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome do Projeto</th>
+      <th>Mini Mundo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projetos.each do |projeto| %>
+      <tr>
+        <td><%= projeto.nomeProjeto %></td>
+        <td><%= projeto.resumo %></td>
+        <td><%= link_to 'Exibir', projeto %></td>
+        <td><%= link_to 'Editar', edit_projeto_path(projeto) %></td>
+        <td><%= link_to 'Excluir', projeto, method: :delete, data: { confirm: 'Voce tem certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo Projeto', new_projeto_path %>
