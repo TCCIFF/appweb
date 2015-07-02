@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Regra Negocios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Siglaregra</th>
+      <th>Nomeregra</th>
+      <th>Descricaoregra</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @regra_negocios.each do |regra_negocio| %>
+      <tr>
+        <td><%= regra_negocio.siglaRegra %></td>
+        <td><%= regra_negocio.nomeRegra %></td>
+        <td><%= regra_negocio.descricaoRegra %></td>
+        <td><%= link_to 'Show', regra_negocio %></td>
+        <td><%= link_to 'Edit', edit_regra_negocio_path(regra_negocio) %></td>
+        <td><%= link_to 'Destroy', regra_negocio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Regra negocio', new_regra_negocio_path %>

@@ -1,0 +1,29 @@
+<%= form_for(@regra_negocio) do |f| %>
+  <% if @regra_negocio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@regra_negocio.errors.count, "error") %> prohibited this regra_negocio from being saved:</h2>
+
+      <ul>
+      <% @regra_negocio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :siglaRegra %><br>
+    <%= f.text_field :siglaRegra %>
+  </div>
+  <div class="field">
+    <%= f.label :nomeRegra %><br>
+    <%= f.text_field :nomeRegra %>
+  </div>
+  <div class="field">
+    <%= f.label :descricaoRegra %><br>
+    <%= f.text_field :descricaoRegra %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

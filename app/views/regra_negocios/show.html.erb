@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Siglaregra:</strong>
+  <%= @regra_negocio.siglaRegra %>
+</p>
+
+<p>
+  <strong>Nomeregra:</strong>
+  <%= @regra_negocio.nomeRegra %>
+</p>
+
+<p>
+  <strong>Descricaoregra:</strong>
+  <%= @regra_negocio.descricaoRegra %>
+</p>
+
+<%= link_to 'Edit', edit_regra_negocio_path(@regra_negocio) %> |
+<%= link_to 'Back', regra_negocios_path %>
