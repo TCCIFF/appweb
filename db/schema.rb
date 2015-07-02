@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150702222841) do
+ActiveRecord::Schema.define(version: 20150702223527) do
+
+  create_table "diagramas", force: :cascade do |t|
+    t.string   "nomeDiagrama"
+    t.string   "tipoDiagrama"
+    t.string   "arquivo"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "glossarios", force: :cascade do |t|
     t.string   "siglaGlossario"

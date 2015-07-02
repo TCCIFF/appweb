@@ -1,0 +1,2 @@
+module DiagramasHelper
+end

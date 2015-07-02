@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nomeDiagrama: MyString
+  tipoDiagrama: MyString
+  arquivo: MyString
+
+two:
+  nomeDiagrama: MyString
+  tipoDiagrama: MyString
+  arquivo: MyString
