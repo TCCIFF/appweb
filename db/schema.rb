@@ -17,8 +17,9 @@ ActiveRecord::Schema.define(version: 20150702224440) do
     t.string   "nomeDiagrama"
     t.string   "tipoDiagrama"
     t.string   "arquivo"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "fk_id_projeto", null: false
   end
 
   create_table "glossarios", force: :cascade do |t|
@@ -26,13 +27,15 @@ ActiveRecord::Schema.define(version: 20150702224440) do
     t.string   "descricaoGlossario"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.integer  "fk_id_projeto",      null: false
   end
 
   create_table "projetos", force: :cascade do |t|
     t.string   "nomeProjeto"
     t.string   "resumo"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "fk_id_usuario", null: false
   end
 
   create_table "regra_negocios", force: :cascade do |t|
@@ -41,6 +44,7 @@ ActiveRecord::Schema.define(version: 20150702224440) do
     t.string   "descricaoRegra"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.integer  "fk_id_projeto",  null: false
   end
 
   create_table "requisitos", force: :cascade do |t|
@@ -51,6 +55,7 @@ ActiveRecord::Schema.define(version: 20150702224440) do
     t.string   "prioridade"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.integer  "fk_id_projeto",      null: false
   end
 
   create_table "users", force: :cascade do |t|
