@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Glossarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Siglaglossario</th>
+      <th>Descricaoglossario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @glossarios.each do |glossario| %>
+      <tr>
+        <td><%= glossario.siglaGlossario %></td>
+        <td><%= glossario.descricaoGlossario %></td>
+        <td><%= link_to 'Show', glossario %></td>
+        <td><%= link_to 'Edit', edit_glossario_path(glossario) %></td>
+        <td><%= link_to 'Destroy', glossario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Glossario', new_glossario_path %>

@@ -1,0 +1,25 @@
+<%= form_for(@glossario) do |f| %>
+  <% if @glossario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@glossario.errors.count, "error") %> prohibited this glossario from being saved:</h2>
+
+      <ul>
+      <% @glossario.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :siglaGlossario %><br>
+    <%= f.text_field :siglaGlossario %>
+  </div>
+  <div class="field">
+    <%= f.label :descricaoGlossario %><br>
+    <%= f.text_field :descricaoGlossario %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Siglaglossario:</strong>
+  <%= @glossario.siglaGlossario %>
+</p>
+
+<p>
+  <strong>Descricaoglossario:</strong>
+  <%= @glossario.descricaoGlossario %>
+</p>
+
+<%= link_to 'Edit', edit_glossario_path(@glossario) %> |
+<%= link_to 'Back', glossarios_path %>
