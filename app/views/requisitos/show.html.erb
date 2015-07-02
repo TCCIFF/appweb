@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Siglarequisito:</strong>
+  <%= @requisito.siglaRequisito %>
+</p>
+
+<p>
+  <strong>Nomerequisito:</strong>
+  <%= @requisito.nomeRequisito %>
+</p>
+
+<p>
+  <strong>Descricaorequisito:</strong>
+  <%= @requisito.descricaoRequisito %>
+</p>
+
+<p>
+  <strong>Tiporequisito:</strong>
+  <%= @requisito.tipoRequisito %>
+</p>
+
+<p>
+  <strong>Prioridade:</strong>
+  <%= @requisito.prioridade %>
+</p>
+
+<%= link_to 'Edit', edit_requisito_path(@requisito) %> |
+<%= link_to 'Back', requisitos_path %>

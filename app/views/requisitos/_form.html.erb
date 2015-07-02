@@ -1,0 +1,37 @@
+<%= form_for(@requisito) do |f| %>
+  <% if @requisito.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@requisito.errors.count, "error") %> prohibited this requisito from being saved:</h2>
+
+      <ul>
+      <% @requisito.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :siglaRequisito %><br>
+    <%= f.text_field :siglaRequisito %>
+  </div>
+  <div class="field">
+    <%= f.label :nomeRequisito %><br>
+    <%= f.text_field :nomeRequisito %>
+  </div>
+  <div class="field">
+    <%= f.label :descricaoRequisito %><br>
+    <%= f.text_field :descricaoRequisito %>
+  </div>
+  <div class="field">
+    <%= f.label :tipoRequisito %><br>
+    <%= f.text_field :tipoRequisito %>
+  </div>
+  <div class="field">
+    <%= f.label :prioridade %><br>
+    <%= f.text_field :prioridade %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

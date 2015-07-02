@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  siglaRequisito: MyString
+  nomeRequisito: MyString
+  descricaoRequisito: MyString
+  tipoRequisito: MyString
+  prioridade: MyString
+
+two:
+  siglaRequisito: MyString
+  nomeRequisito: MyString
+  descricaoRequisito: MyString
+  tipoRequisito: MyString
+  prioridade: MyString

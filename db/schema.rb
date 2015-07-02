@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150702224132) do
+ActiveRecord::Schema.define(version: 20150702224440) do
 
   create_table "diagramas", force: :cascade do |t|
     t.string   "nomeDiagrama"
@@ -41,6 +41,16 @@ ActiveRecord::Schema.define(version: 20150702224132) do
     t.string   "descricaoRegra"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+  end
+
+  create_table "requisitos", force: :cascade do |t|
+    t.string   "siglaRequisito"
+    t.string   "nomeRequisito"
+    t.string   "descricaoRequisito"
+    t.string   "tipoRequisito"
+    t.string   "prioridade"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   create_table "users", force: :cascade do |t|
