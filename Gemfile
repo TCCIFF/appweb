@@ -10,6 +10,8 @@ gem 'sqlite3'
 
 gem 'paperclip', '~> 4.3.0'
 
+gem 'devise'
+
 
 
 gem 'sass-rails', '~> 5.0'
