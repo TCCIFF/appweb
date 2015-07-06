@@ -1,4 +1,5 @@
-<%= form_for(@diagrama) do |f| %>
+<%= form_for @diagrama, :hmtl => {multipart: true} do |f| %>
+
   <% if @diagrama.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@diagrama.errors.count, "error") %> prohibited this diagrama from being saved:</h2>
@@ -12,18 +13,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :nomeDiagrama %><br>
+    <%= f.label :nomeDiagrama, "Nome do Diagrama" %><br>
     <%= f.text_field :nomeDiagrama %>
   </div>
   <div class="field">
-    <%= f.label :tipoDiagrama %><br>
+    <%= f.label :tipoDiagrama, "Tipo do Diagrama" %><br>
     <%= f.text_field :tipoDiagrama %>
   </div>
+
   <div class="field">
-    <%= f.label :arquivo %><br>
-    <%= f.text_field :arquivo %>
+    <%= f.label :file, "Arquivo" %><br>
+    <%= f.file_field :file %>
   </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Criar Diagrama" %>
   </div>
 <% end %>

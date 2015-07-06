@@ -8,6 +8,8 @@ gem 'rails', '4.2.2'
 gem 'sqlite3'
 # Use SCSS for stylesheets
 
+gem 'paperclip', '~> 4.3.0'
+
 
 
 gem 'sass-rails', '~> 5.0'

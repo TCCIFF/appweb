@@ -1,19 +1,21 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Nomediagrama:</strong>
+  <strong>Nome do diagrama:</strong>
   <%= @diagrama.nomeDiagrama %>
 </p>
 
 <p>
-  <strong>Tipodiagrama:</strong>
+  <strong>Tipo de diagrama:</strong>
   <%= @diagrama.tipoDiagrama %>
 </p>
 
 <p>
-  <strong>Arquivo:</strong>
-  <%= @diagrama.arquivo %>
+  <strong>File:</strong>
+	<%= image_tag @diagrama.file.url(:thumb) %>
 </p>
+
+
 
 <%= link_to 'Edit', edit_diagrama_path(@diagrama) %> |
 <%= link_to 'Back', diagramas_path %>

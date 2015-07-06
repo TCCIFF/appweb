@@ -11,15 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150702224440) do
+ActiveRecord::Schema.define(version: 20150705201000) do
 
   create_table "diagramas", force: :cascade do |t|
     t.string   "nomeDiagrama"
     t.string   "tipoDiagrama"
-    t.string   "arquivo"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.integer  "fk_id_projeto", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "fk_id_projeto"
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
   end
 
   create_table "glossarios", force: :cascade do |t|
@@ -35,7 +38,7 @@ ActiveRecord::Schema.define(version: 20150702224440) do
     t.string   "resumo"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.integer  "fk_id_usuario", null: false
+    t.integer  "fk_id_usuario"
   end
 
   create_table "regra_negocios", force: :cascade do |t|

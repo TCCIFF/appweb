@@ -1,6 +1,8 @@
 class DiagramasController < ApplicationController
   before_action :set_diagrama, only: [:show, :edit, :update, :destroy]
 
+  
+
   # GET /diagramas
   # GET /diagramas.json
   def index
@@ -69,6 +71,6 @@ class DiagramasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def diagrama_params
-      params.require(:diagrama).permit(:nomeDiagrama, :tipoDiagrama, :arquivo)
+      params.require(:diagrama).permit(:nomeDiagrama, :tipoDiagrama, :arquivo, :file)
     end
 end

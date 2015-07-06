@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Diagramas</h1>
+<h1>Lista de Diagramas</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Nomediagrama</th>
-      <th>Tipodiagrama</th>
+      <th>Nome do Diagrama</th>
+      <th>Tipo do Diagrama</th>
       <th>Arquivo</th>
       <th colspan="3"></th>
     </tr>
@@ -17,7 +17,7 @@
       <tr>
         <td><%= diagrama.nomeDiagrama %></td>
         <td><%= diagrama.tipoDiagrama %></td>
-        <td><%= diagrama.arquivo %></td>
+        <td><%= diagrama.file_file_name %></td>
         <td><%= link_to 'Show', diagrama %></td>
         <td><%= link_to 'Edit', edit_diagrama_path(diagrama) %></td>
         <td><%= link_to 'Destroy', diagrama, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Diagrama', new_diagrama_path %>
+<%= link_to 'Novo Diagrama', new_diagrama_path %>
