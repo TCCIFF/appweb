@@ -1,6 +1,6 @@
 class RequisitosController < ApplicationController
   before_action :set_requisito, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /requisitos
   # GET /requisitos.json
   def index

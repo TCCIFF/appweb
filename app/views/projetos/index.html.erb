@@ -1,5 +1,13 @@
 <p id="notice"><%= notice %></p>
 
+  <ul>
+    <li><%= current_user.email %></li>
+  </ul>
+
+  <ul>  
+    <li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
+  </ul>
+
 <h1>Listagem de Projetos</h1>
 
 <table>

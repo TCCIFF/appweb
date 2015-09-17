@@ -1,6 +1,6 @@
 class DiagramasController < ApplicationController
   before_action :set_diagrama, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   
 
   # GET /diagramas

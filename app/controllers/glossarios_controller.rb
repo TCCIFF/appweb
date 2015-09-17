@@ -1,5 +1,6 @@
 class GlossariosController < ApplicationController
   before_action :set_glossario, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /glossarios
   # GET /glossarios.json

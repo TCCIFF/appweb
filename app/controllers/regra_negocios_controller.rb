@@ -1,6 +1,6 @@
 class RegraNegociosController < ApplicationController
   before_action :set_regra_negocio, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /regra_negocios
   # GET /regra_negocios.json
   def index
